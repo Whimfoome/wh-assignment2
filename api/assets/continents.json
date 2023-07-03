@@ -1,0 +1,28 @@
+{
+  "continents": [
+    {
+      "name": "Africa",
+      "info": "Africa is the second-largest continent in the world, known for its diverse cultures, stunning landscapes, and abundant wildlife..."
+    },
+    {
+      "name": "Asia",
+      "info": "Asia, the largest and most populous continent, is a land of remarkable diversity and contrasts..."
+    },
+    {
+      "name": "Europe",
+      "info": "Europe, a continent steeped in history and culture, enchants visitors with its timeless beauty..."
+    },
+    {
+      "name": "North America",
+      "info": "North America, the third-largest continent, offers a vast playground for adventurers and nature lovers..."
+    },
+    {
+      "name": "Oceania",
+      "info": "Oceania, a region comprising thousands of islands scattered across the Pacific Ocean, is a paradise for nature enthusiasts and adventure seekers..."
+    },
+    {
+      "name": "South America",
+      "info": "South America, a continent of breathtaking landscapes, vibrant cultures, and ancient civilizations..."
+    }
+  ]
+}
