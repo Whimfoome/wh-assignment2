@@ -1,10 +1,8 @@
 'use client'
 
-import { useState, useEffect, forwardRef, Children, CSSProperties, ReactNode, isValidElement } from "react";
+import { useState, useEffect, forwardRef, Children, CSSProperties, ReactNode } from "react";
 import Container from "react-bootstrap/Container";
 import Dropdown from "react-bootstrap/Dropdown";
-import countriesData from "./countries.json"
-import { Form } from "react-bootstrap";
 
 interface CountriesApi {
   continents: {
@@ -39,9 +37,9 @@ export default function Home() {
 
         const result: CountriesApi = await response.json();
         setCountries(result);
-        console.log(result);
       } catch (err) {
         console.error(err);
+        setErrorMessage("Something went wrong when getting the countries.");
       }
     }
 
@@ -51,7 +49,32 @@ export default function Home() {
   function handleSelection(country: { name: string; continent: string }) {
     setSelected(country);
 
-    setInfo(country.continent);
+    const getContinents = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/continents");
+
+        if (!response.ok) {
+          console.log(response);
+          setErrorMessage("Couldn't fetch continents, please try to select again");
+          setInfo("");
+          return;
+        }
+
+        const result: ContinentsApi = await response.json();
+        const found = result.continents.find(element => element.name === selected.continent)
+        if (found) {
+          setInfo(found.info);
+        } else {
+          setErrorMessage("Couldn't find information about the continent of this country");
+          setInfo("");
+        }
+      } catch (err) {
+        console.error(err);
+        setErrorMessage("Something went wrong when getting the continents.");
+      }
+    }
+
+    getContinents();
   }
 
   return (
@@ -66,13 +89,19 @@ export default function Home() {
 
               <Dropdown.Menu as={CustomMenu}>
                 {countries.continents && countries.continents.map((continent) => {
-                  return continent.countries.map((country) => {
-                    return (
-                      <Dropdown.Item key={crypto.randomUUID()} onClick={() => handleSelection({ name: country, continent: continent.name })}>
-                        {country}
-                      </Dropdown.Item>
-                    );
-                  })
+                  return <>
+                    <Dropdown.Item key={crypto.randomUUID()} disabled={true} className="dropdown-continent">
+                      {continent.name}
+                    </Dropdown.Item>
+                    {continent.countries.map((country) => {
+                      return (
+                        <Dropdown.Item key={crypto.randomUUID()} onClick={() => handleSelection({ name: country, continent: continent.name })}>
+                          {country}
+                        </Dropdown.Item>
+                      );
+                    })}
+                    <Dropdown.Divider key={crypto.randomUUID()} />
+                  </>
                 })}
               </Dropdown.Menu>
             </Dropdown>
@@ -83,16 +112,6 @@ export default function Home() {
                     return <p>{info}</p>
                   }
                   return <p>{errorMessage.length !== 0 ? errorMessage : ""}</p>
-                  // switch (selected.type) {
-                  //   case ('A'):
-                  //     return (<p>The employee should provide notarised copies of all official original documents (i.e. diploma, criminal record, etc.). The notarised copy should be in original (no copies of the notarised copy will be accepted). You need a notarisation of the sworn translator’s signature.</p>)
-                  //   case ('B'):
-                  //     return (<p>The employee should provide all official documents with an apostille</p>)
-                  //   case ('C'):
-                  //     return (<p>The employee needs to attest their official documents by the local Ministry of Foreign Affairs and then have it stamped in the Bulgarian embassy in their country of origin.</p>)
-                  //   default:
-                  //     return (<p></p>)
-                  // }
                 })()
               }
             </div>
@@ -112,7 +131,6 @@ interface Props {
 
 const CustomMenu = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { children, style, className, 'aria-labelledby': labeledBy } = props;
-  const [value, setValue] = useState('');
 
   return (
     <div
@@ -121,25 +139,8 @@ const CustomMenu = forwardRef<HTMLDivElement, Props>((props, ref) => {
       className={className}
       aria-labelledby={labeledBy}
     >
-      <div className="m-2 p-0">
-        <Form.Control
-          autoFocus
-          placeholder="Type to filter..."
-          onChange={(e) => setValue(e.target.value)}
-          value={value}
-        />
-      </div>
       <div className="custom-dropdown">
-        {Children.toArray(children).filter(
-          (child) => {
-            if (isValidElement(child)) {
-              const childText = child.props.children as string;
-              return !value || childText.toLowerCase().startsWith(value);
-            }
-
-            return false;
-          }
-        )}
+        {Children.toArray(children)}
       </div>
     </div>
   );

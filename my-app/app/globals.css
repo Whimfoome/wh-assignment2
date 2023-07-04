@@ -34,7 +34,12 @@ body {
 }
 
 .custom-dropdown {
-  max-height: 155px;
+  max-height: 400px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+.dropdown-continent {
+  padding-left: 0.5em;
+  font-weight: bold;
 }
