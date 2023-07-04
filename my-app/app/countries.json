@@ -1,0 +1,434 @@
+[
+  {
+    "name": "Austria",
+    "type": "A"
+  },
+  {
+    "name": "Algeria",
+    "type": "A"
+  },
+  {
+    "name": "Azerbaijan",
+    "type": "A"
+  },
+  {
+    "name": "Armenia",
+    "type": "A"
+  },
+  {
+    "name": "Belarus",
+    "type": "A"
+  },
+  {
+    "name": "Bosna",
+    "type": "A"
+  },
+  {
+    "name": "Vietnam",
+    "type": "A"
+  },
+  {
+    "name": "Georgia",
+    "type": "A"
+  },
+  {
+    "name": "Greece",
+    "type": "A"
+  },
+  {
+    "name": "Italy",
+    "type": "A"
+  },
+  {
+    "name": "Yemen",
+    "type": "A"
+  },
+  {
+    "name": "Cyprus",
+    "type": "A"
+  },
+  {
+    "name": "Cuba",
+    "type": "A"
+  },
+  {
+    "name": "Estonia",
+    "type": "A"
+  },
+  {
+    "name": "Kuwait",
+    "type": "A"
+  },
+  {
+    "name": "Latvia",
+    "type": "A"
+  },
+  {
+    "name": "Lithuania",
+    "type": "A"
+  },
+  {
+    "name": "Lebanon",
+    "type": "A"
+  },
+  {
+    "name": "Macedonia",
+    "type": "A"
+  },
+  {
+    "name": "Mongolia",
+    "type": "A"
+  },
+  {
+    "name": "Montenegro",
+    "type": "A"
+  },
+  {
+    "name": "North Korea",
+    "type": "A"
+  },
+  {
+    "name": "Poland",
+    "type": "A"
+  },
+  {
+    "name": "Romania",
+    "type": "A"
+  },
+  {
+    "name": "Russia",
+    "type": "A"
+  },
+  {
+    "name": "Serbia",
+    "type": "A"
+  },
+  {
+    "name": "Slovenia",
+    "type": "A"
+  },
+  {
+    "name": "Syria",
+    "type": "A"
+  },
+  {
+    "name": "Uzbekistan",
+    "type": "A"
+  },
+  {
+    "name": "Ucraine",
+    "type": "A"
+  },
+  {
+    "name": "Hungary",
+    "type": "A"
+  },
+  {
+    "name": "France",
+    "type": "A"
+  },
+  {
+    "name": "Croatia",
+    "type": "A"
+  },
+  {
+    "name": "Czech Republic",
+    "type": "A"
+  },
+  {
+    "name": "Albania",
+    "type": "B"
+  },
+  {
+    "name": "Andorra",
+    "type": "B"
+  },
+  {
+    "name": "Argentina",
+    "type": "B"
+  },
+  {
+    "name": "Australia",
+    "type": "B"
+  },
+  {
+    "name": "Belgium",
+    "type": "B"
+  },
+  {
+    "name": "Bosnia and Herzegovina",
+    "type": "B"
+  },
+  {
+    "name": "Brazil",
+    "type": "B"
+  },
+  {
+    "name": "Burkina Faso",
+    "type": "B"
+  },
+  {
+    "name": "Canada",
+    "type": "B"
+  },
+  {
+    "name": "Chile",
+    "type": "B"
+  },
+  {
+    "name": "China",
+    "type": "B"
+  },
+  {
+    "name": "Costa Rica",
+    "type": "B"
+  },
+  {
+    "name": "Denmark",
+    "type": "B"
+  },
+  {
+    "name": "Dominican Republic",
+    "type": "B"
+  },
+  {
+    "name": "Ecuador",
+    "type": "B"
+  },
+  {
+    "name": "Egypt",
+    "type": "B"
+  },
+  {
+    "name": "El Salvador",
+    "type": "B"
+  },
+  {
+    "name": "Estonia",
+    "type": "B"
+  },
+  {
+    "name": "Finland",
+    "type": "B"
+  },
+  {
+    "name": "Georgia",
+    "type": "B"
+  },
+  {
+    "name": "Germany",
+    "type": "B"
+  },
+  {
+    "name": "Greece",
+    "type": "B"
+  },
+  {
+    "name": "Honduras",
+    "type": "B"
+  },
+  {
+    "name": "Iceland",
+    "type": "B"
+  },
+  {
+    "name": "India",
+    "type": "B"
+  },
+  {
+    "name": "Ireland",
+    "type": "B"
+  },
+  {
+    "name": "Israel",
+    "type": "B"
+  },
+  {
+    "name": "Japan",
+    "type": "B"
+  },
+  {
+    "name": "Jordan",
+    "type": "B"
+  },
+  {
+    "name": "Kazakhstan",
+    "type": "B"
+  },
+  {
+    "name": "Latvia",
+    "type": "B"
+  },
+  {
+    "name": "Lithuania",
+    "type": "B"
+  },
+  {
+    "name": "Luxembourg",
+    "type": "B"
+  },
+  {
+    "name": "Malaysia",
+    "type": "B"
+  },
+  {
+    "name": "Malta",
+    "type": "B"
+  },
+  {
+    "name": "Mauritius",
+    "type": "B"
+  },
+  {
+    "name": "Mexico",
+    "type": "B"
+  },
+  {
+    "name": "Monaco",
+    "type": "B"
+  },
+  {
+    "name": "Montenegro",
+    "type": "B"
+  },
+  {
+    "name": "Morocco",
+    "type": "B"
+  },
+  {
+    "name": "Namibia",
+    "type": "B"
+  },
+  {
+    "name": "Netherlands",
+    "type": "B"
+  },
+  {
+    "name": "New Zealand",
+    "type": "B"
+  },
+  {
+    "name": "Nicaragua",
+    "type": "B"
+  },
+  {
+    "name": "Norway",
+    "type": "B"
+  },
+  {
+    "name": "Panama",
+    "type": "B"
+  },
+  {
+    "name": "Paraguay",
+    "type": "B"
+  },
+  {
+    "name": "Peru",
+    "type": "B"
+  },
+  {
+    "name": "Philippines",
+    "type": "B"
+  },
+  {
+    "name": "Portugal",
+    "type": "B"
+  },
+  {
+    "name": "Republic of Korea",
+    "type": "B"
+  },
+  {
+    "name": "Republic of Moldova",
+    "type": "B"
+  },
+  {
+    "name": "Romania",
+    "type": "B"
+  },
+  {
+    "name": "Saudi Arabia",
+    "type": "B"
+  },
+  {
+    "name": "Singapore",
+    "type": "B"
+  },
+  {
+    "name": "Slovakia",
+    "type": "B"
+  },
+  {
+    "name": "South Africa",
+    "type": "B"
+  },
+  {
+    "name": "Spain",
+    "type": "B"
+  },
+  {
+    "name": "Sri Lanka",
+    "type": "B"
+  },
+  {
+    "name": "Suriname",
+    "type": "B"
+  },
+  {
+    "name": "Sweden",
+    "type": "B"
+  },
+  {
+    "name": "Switzerland",
+    "type": "B"
+  },
+  {
+    "name": "Thailand",
+    "type": "B"
+  },
+  {
+    "name": "Tunisia",
+    "type": "B"
+  },
+  {
+    "name": "Türkiye",
+    "type": "B"
+  },
+  {
+    "name": "United Kingdom of Great Britain and Northern Ireland",
+    "type": "B"
+  },
+  {
+    "name": "United States of America",
+    "type": "B"
+  },
+  {
+    "name": "Uruguay",
+    "type": "B"
+  },
+  {
+    "name": "Venezuela (Bolivarian Republic of)",
+    "type": "B"
+  },
+  {
+    "name": "Viet Nam",
+    "type": "B"
+  },
+  {
+    "name": "Zambia",
+    "type": "B"
+  },
+  {
+    "name": "Ukraine",
+    "type": "C"
+  },
+  {
+    "name": "Bulgaria",
+    "type": "C"
+  },
+  {
+    "name": "North Macedonia",
+    "type": "C"
+  }
+ ]
