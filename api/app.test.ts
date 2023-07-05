@@ -63,11 +63,11 @@ describe("Failure Handling", () => {
     expect(response.body).toEqual({ message: "Server couldn't read file" });
   });
 
-  test("Fail JSON Parse should return 400", async () => {
+  test("Fail JSON Parse should return 404", async () => {
     jest.spyOn(Math, "random").mockReturnValue(0.5);
 
     const response = await request(app).get("/invalidParse");
-    expect(response.status).toBe(400);
-    expect(response.body).toEqual({ message: "Couldn't parse file" });
+    expect(response.status).toBe(404);
+    expect(response.body).toEqual({ message: "Server couldn't read file" });
   });
 });
