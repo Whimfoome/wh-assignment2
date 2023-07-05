@@ -51,7 +51,7 @@ export default function DropdownMenu({ setErrorMessage, setInfo, countries }: Dr
     }
 
     return (
-        <Dropdown className="dropdown-button">
+        <Dropdown className="dropdown-button" data-testid="dropdown-menu">
             <Dropdown.Toggle variant="custom">
                 {Object.keys(selected).length === 0 ? 'Select Country' : selected.name}
             </Dropdown.Toggle>
