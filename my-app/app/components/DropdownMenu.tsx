@@ -34,7 +34,7 @@ export default function DropdownMenu({ setErrorMessage, setInfo, countries }: Dr
                 }
 
                 const result: ContinentsApi = await response.json();
-                const found = result.continents.find(element => element.name === selected.continent)
+                const found = result.continents.find(element => element.name === country.continent)
                 if (found) {
                     setInfo(found.info);
                 } else {
@@ -58,8 +58,8 @@ export default function DropdownMenu({ setErrorMessage, setInfo, countries }: Dr
 
             <Dropdown.Menu as={CustomMenu}>
                 {countries.continents && countries.continents.map((continent) => {
-                    return <>
-                        <Dropdown.Item key={crypto.randomUUID()} disabled={true} className="dropdown-continent">
+                    return <div key={crypto.randomUUID()}>
+                        <Dropdown.Item disabled={true} className="dropdown-continent">
                             {continent.name}
                         </Dropdown.Item>
                         {continent.countries.map((country) => {
@@ -69,8 +69,8 @@ export default function DropdownMenu({ setErrorMessage, setInfo, countries }: Dr
                                 </Dropdown.Item>
                             );
                         })}
-                        <Dropdown.Divider key={crypto.randomUUID()} />
-                    </>
+                        <Dropdown.Divider />
+                    </div>
                 })}
             </Dropdown.Menu>
         </Dropdown>

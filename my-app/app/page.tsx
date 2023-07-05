@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import DropdownMenu from "./components/DropdownMenu";
+import { Button } from "react-bootstrap";
 
 export interface CountriesApi {
   continents: {
@@ -16,25 +17,30 @@ export default function Home() {
   const [errorMessage, setErrorMessage] = useState("");
   const [info, setInfo] = useState("");
 
-  useEffect(() => {
-    const getCountries = async () => {
-      try {
-        const response = await fetch("http://localhost:8080/countries");
+  function handleRefreshButtonClick() {
+    getCountries();
+  }
 
-        if (!response.ok) {
-          console.log(response);
-          setErrorMessage("Couldn't fetch countries, please refresh page");
-          return;
-        }
+  async function getCountries() {
+    try {
+      const response = await fetch("http://localhost:8080/countries");
 
-        const result: CountriesApi = await response.json();
-        setCountries(result);
-      } catch (err) {
-        console.error(err);
-        setErrorMessage("Something went wrong when getting the countries.");
+      if (!response.ok) {
+        console.log(response);
+        setErrorMessage("Couldn't fetch countries, please refresh page");
+        return;
       }
-    }
 
+      const result: CountriesApi = await response.json();
+      setCountries(result);
+      setErrorMessage("");
+    } catch (err) {
+      console.error(err);
+      setErrorMessage("Something went wrong when getting the countries.");
+    }
+  }
+
+  useEffect(() => {
     getCountries();
   }, [])
 
@@ -50,7 +56,14 @@ export default function Home() {
                   if (info.length !== 0) {
                     return <p>{info}</p>
                   }
-                  return <p>{errorMessage.length !== 0 ? errorMessage : ""}</p>
+                  if (errorMessage.length !== 0) {
+                    return (
+                      <>
+                        <p>{errorMessage}</p>
+                        {!countries.continents && <Button onClick={handleRefreshButtonClick} variant="secondary">Refresh</Button>}
+                      </>
+                    )
+                  }
                 })()
               }
             </div>
